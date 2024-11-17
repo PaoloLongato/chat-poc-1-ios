@@ -12,7 +12,7 @@ import SwiftyChatMock
 struct BasicExampleView: View {
 
     @State var messages: [MessageMocker.ChatMessageItem] = MessageMocker.generate(kind: .text, count: 20)
-
+    @State var scrollToBottom = false
     @State private var message = ""
 
     var body: some View {
@@ -20,7 +20,10 @@ struct BasicExampleView: View {
     }
 
     private var chatView: some View {
-        ChatView<MessageMocker.ChatMessageItem, MessageMocker.ChatUserItem>(messages: $messages) {
+        ChatView<MessageMocker.ChatMessageItem, MessageMocker.ChatUserItem>(
+            messages: $messages,
+            scrollToBottom: $scrollToBottom
+        ) {
 
             BasicInputView(
                 message: $message,
@@ -29,6 +32,21 @@ struct BasicExampleView: View {
                     self.messages.append(
                         .init(user: MessageMocker.sender, messageKind: messageKind, isSender: true)
                     )
+                    self.messages.append(
+                        .init(user: MessageMocker.sender, messageKind: .loading, isSender: false)
+                    )
+                    scrollToBottom = true
+                    Task {
+                        try await Task.sleep(nanoseconds: 2_000_000_000)
+                        let response = MessageMocker.ChatMessageItem(
+                            user: MessageMocker.chatbot,
+                            messageKind: .text("Bot response..."),
+                            isSender: false
+                        )
+                        self.messages.removeLast()
+                        self.messages.append(response)
+                        scrollToBottom = true
+                    }
                 }
             )
             .background(Color.primary.colorInvert())
@@ -65,6 +83,9 @@ struct BasicExampleView: View {
         #if os(iOS)
         .navigationBarTitle("Basic")
         #endif
+        .onAppear {
+            scrollToBottom = true
+        }
     }
 }
 

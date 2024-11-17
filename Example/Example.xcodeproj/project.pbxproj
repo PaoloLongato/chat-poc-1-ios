@@ -16,6 +16,7 @@
 		94410B8C2BC6B54900C37BDB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94410B8B2BC6B54900C37BDB /* Extensions.swift */; };
 		9498B4232BCAADBB0021FB93 /* SwiftyChat in Frameworks */ = {isa = PBXBuildFile; productRef = 9498B4222BCAADBB0021FB93 /* SwiftyChat */; };
 		9498B4252BCAADBB0021FB93 /* SwiftyChatMock in Frameworks */ = {isa = PBXBuildFile; productRef = 9498B4242BCAADBB0021FB93 /* SwiftyChatMock */; };
+		E2D248142CEA65560000D02B /* PatientEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D248132CEA65560000D02B /* PatientEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		94410B892BC6B54100C37BDB /* BasicExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleView.swift; sourceTree = "<group>"; };
 		94410B8B2BC6B54900C37BDB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		94410B8D2BC6B5C800C37BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E2D248132CEA65560000D02B /* PatientEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 			children = (
 				94410B732BC6B4D400C37BDB /* Example */,
 				94410B722BC6B4D400C37BDB /* Products */,
-				9498B4192BC982FF0021FB93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +67,7 @@
 				94410B8D2BC6B5C800C37BDB /* Info.plist */,
 				94410B742BC6B4D400C37BDB /* ExampleApp.swift */,
 				94410B852BC6B53900C37BDB /* ChatListView.swift */,
+				E2D248132CEA65560000D02B /* PatientEntity.swift */,
 				94410B872BC6B53E00C37BDB /* AdvancedExampleView.swift */,
 				94410B892BC6B54100C37BDB /* BasicExampleView.swift */,
 				94410B8B2BC6B54900C37BDB /* Extensions.swift */,
@@ -162,6 +164,7 @@
 			files = (
 				94410B8C2BC6B54900C37BDB /* Extensions.swift in Sources */,
 				94410B8A2BC6B54100C37BDB /* BasicExampleView.swift in Sources */,
+				E2D248142CEA65560000D02B /* PatientEntity.swift in Sources */,
 				94410B882BC6B53E00C37BDB /* AdvancedExampleView.swift in Sources */,
 				94410B862BC6B53900C37BDB /* ChatListView.swift in Sources */,
 				94410B752BC6B4D400C37BDB /* ExampleApp.swift in Sources */,
@@ -298,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = L9DND36YTU;
+				DEVELOPMENT_TEAM = S3B628LMSB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -312,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eneskaraosman.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paololongato.chatExample1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -330,7 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
-				DEVELOPMENT_TEAM = L9DND36YTU;
+				DEVELOPMENT_TEAM = S3B628LMSB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -344,7 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eneskaraosman.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paololongato.chatExample1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
